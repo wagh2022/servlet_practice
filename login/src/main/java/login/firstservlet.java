@@ -2,7 +2,9 @@ package login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.ProcessBuilder.Redirect;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,6 +40,14 @@ public class firstservlet extends HttpServlet {
 	else {
 		
 		out.println("you have not accept terms snd condition");
+		
+		// request dispatcher calling another page it may be servlet or html or jsp page
+//		RequestDispatcher rd=req.getRequestDispatcher("null.html");
+//		rd.forward(req, resp);
+		
+		resp.sendRedirect("null1.html");
+		
+		
 	}
 	}
 
